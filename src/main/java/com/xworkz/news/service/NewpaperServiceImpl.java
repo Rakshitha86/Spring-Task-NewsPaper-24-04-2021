@@ -1,5 +1,7 @@
 package com.xworkz.news.service;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 import org.springframework.beans.BeanUtils;
@@ -15,6 +17,8 @@ public class NewpaperServiceImpl implements NewspaperService {
 
 	@Autowired
 	private NewspaperDAO dao;
+
+	public static Map<String, String> map = new HashMap<String, String>();
 
 	public NewpaperServiceImpl() {
 		super();
@@ -41,6 +45,7 @@ public class NewpaperServiceImpl implements NewspaperService {
 				validData = true;
 			} else {
 				System.out.println("name is not valid");
+				map.put("Name", "Enter valid name");
 				validData = false;
 			}
 			if (validData) {
@@ -50,9 +55,10 @@ public class NewpaperServiceImpl implements NewspaperService {
 					validData = true;
 				} else {
 					System.out.println("cost is not valid");
+					map.put("Cost", "Enter valid cost");
 					validData = false;
 				}
-			}
+		}
 
 			if (validData) {
 				int noOfPages = dto.getNoOfPages();
@@ -61,6 +67,7 @@ public class NewpaperServiceImpl implements NewspaperService {
 					validData = true;
 				} else {
 					System.out.println("noOfPages is not valid");
+					map.put("NoOfPages", "Enter valid no of pages");
 					validData = false;
 				}
 			}
@@ -71,6 +78,7 @@ public class NewpaperServiceImpl implements NewspaperService {
 					validData = true;
 				} else {
 					System.out.println("language is not valid");
+					map.put("Language", "Enter valid language");
 					validData = false;
 				}
 			}
@@ -82,6 +90,7 @@ public class NewpaperServiceImpl implements NewspaperService {
 					validData = true;
 				} else {
 					System.out.println("magazine is not valid");
+					map.put("Magazine", "Enter valid magazine");
 					validData = false;
 				}
 
@@ -95,13 +104,12 @@ public class NewpaperServiceImpl implements NewspaperService {
 			}else {
 				return false;
 			}
-		} else {
-			System.out.println("dto is null, invalid data");
-		}
+			} else {
+				System.out.println("dto is null, invalid data");
+			}
 		}
 		return true;
-	
+
 	}
 
 }
-

@@ -9,5 +9,6 @@
 <body>
 <h1>Registration Successfull!!</h1>
 <h1>Thank You!!!!!!!</h1>
+<h2>${message}</h2>
 </body>
 </html>

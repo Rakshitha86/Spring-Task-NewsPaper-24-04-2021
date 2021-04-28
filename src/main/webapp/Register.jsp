@@ -29,12 +29,13 @@ body {
 	position: absolute;
 	left: 40%;
 	top: 20%;
+	height :100%;
 	border: 5px solid solid;
 	box-shadow: 1px 7px 6px 5px rgb(255, 0, 76);
 }
 
 .center-screen>div {
-	padding: 5px;
+	padding: 20px;
 }
 
 input {
@@ -63,7 +64,7 @@ form {
 }
 
 footer {
-	margin-top: 45%;
+	margin-top: 50%;
 	text-align: justify;
 	background-color: lime;
 	color: blue;
@@ -85,22 +86,28 @@ footer {
 			<div>
 				<input type="text" name="name" placeholder="Enter first name"
 					autocomplete="off">
+				<h2>${ErrorInTheFieldName}</h2>
 			</div>
 			<div>
 				<input type="text" name="cost" placeholder="Enter amount"
 					autocomplete="off">
+				<h2>${ErrorInTheFieldCost}</h2>
 			</div>
 			<div>
 				<input type="text" name="noOfPages" placeholder="Enter no of pages"
 					autocomplete="off">
+				<h2>${ErrorInTheFieldNoOfPages}</h2>
 			</div>
-			 
+
 			<div>
 				<input type="text" name="language" placeholder="Enter language"
 					autocomplete="off">
+				<h2>${ErrorInTheFieldLanguage}</h2>
 			</div>
 			<div>
-				<input type="text" name="magazine" placeholder="Enter magazine">
+				<input type="text" name="magazine" placeholder="Enter magazine"
+					autocomplete="off">
+				<h2>${ErrorInTheFieldMagazine}</h2>
 			</div>
 
 
@@ -109,13 +116,13 @@ footer {
 				<button class="submit">Reset</button>
 			</div>
 		</div>
-		</div>
+	
 		<div>
 			<footer>All Right Reserved&copy:2021</footer>
 		</div>
 	</form>
-	  <div>
-	  <h2>${message}</h2>
-	  </div>
+	<div>
+		<h2>${message}</h2>
+	</div>
 </body>
 </html>
